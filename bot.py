@@ -162,7 +162,7 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = forwarded_msg.message_id
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{file_er_id}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start={file_er_id}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.message_id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                               "Get Sharable Stored Link", url=share_link)]]))
