@@ -49,8 +49,8 @@ Pengembang adalah Super Noob. Baru Belajar dari Dokumen Resmi. Harap Donasi peng
 Juga ingat bahwa pengembang akan Menghapus Konten Dewasa dari Database. Jadi lebih baik 
 [Donate Now](DONATE_LINK)
 """
-	HOME_TEXT = f"""
-Hi, {}](tg://user?id={})\n\nIni Permanen **{BOT_NAME}**.
+	HOME_TEXT = """
+Hi, {}](tg://user?id={})\n\nIni Permanen **FILE STORE**.
 
 Kirimi saya file apa pun, saya akan memberi Anda Tautan yang Dapat Dibagikan secara permanen. Saya Mendukung Saluran Juga! Centang Tombol **About Bot**.
-""",
+"""
