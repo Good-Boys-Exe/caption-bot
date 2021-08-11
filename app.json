@@ -53,6 +53,14 @@
         },
         "USERNAME_GROUP": {
         },
+        "USERNAME_CHANNEL": {
+        },
+        "BOT_NAME": {
+        },
+        "OWNER_USERNAME": {
+        },
+        "DONATE_LINK": {
+        },
         "FORWARD_AS_COPY": {
             "description": "If True all messages will be forwarder As Copy. If False all messages will be forwarder with Forward Tag. Value should be True/False !!",
             "required": false
