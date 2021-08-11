@@ -51,8 +51,8 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Support Group", url=f"https://t.me/{Config.USERNAME_GROUP}"),
+                        InlineKeyboardButton("Bots Channel", url=f"https://t.me/{Config.USERNAME_CHANNEL}")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -72,7 +72,7 @@ async def start(bot: Client, cmd: Message):
                 send_stored_file = await bot.forward_messages(chat_id=cmd.from_user.id, from_chat_id=Config.DB_CHANNEL,
                                                               message_ids=file_id)
             await send_stored_file.reply_text(
-                f"**Here is Sharable Link of this file:** https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{file_id}\n\n__To Retrive the Stored File, just open the link!__",
+                f"**Ini Tautan yang Dapat Dibagikan dari file ini:** https://t.me/{Config.BOT_USERNAME}?start={file_id}\n\n__To Retrive the Stored File, just open the link!__",
                 disable_web_page_preview=True, quote=True)
         except Exception as err:
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
@@ -99,7 +99,7 @@ async def main(bot: Client, message: Message):
                 pass
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/DevsZone)",
+            await message.reply_text(f"Sorry, You are banned!\n\nContact [Support Group](https://t.me/{Config.USERNAME_GROUP})",
                                      disable_web_page_preview=True)
             return
 
@@ -115,12 +115,12 @@ async def main(bot: Client, message: Message):
                 parse_mode="Markdown", disable_web_page_preview=True)
             share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{file_er_id}"
             await editable.edit(
-                f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
+                f"**File Anda Tersimpan di Database saya!**\n\nBerikut adalah Tautan Permanen file Anda: {share_link} \n\nCukup Klik tautan untuk mendapatkan file Anda!",
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("Open Link", url=share_link)],
-                     [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates"),
-                      InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")]]
+                     [InlineKeyboardButton("Bots Channel", url=f"https://t.me/{Config.USERNAME_CHANNEL}"),
+                      InlineKeyboardButton("Support Group", url=f"https://t.me/{Config.USERNAME_GROUP}")]]
                 ),
                 disable_web_page_preview=True
             )
@@ -312,10 +312,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
-                    ],
-                    [
+
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
                         InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
@@ -331,10 +328,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
-                    ],
-                    [
+
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
                         InlineKeyboardButton("Go Home", callback_data="gotohome")
                     ]
@@ -350,8 +344,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Support Group", url=f"https://t.me/{Config.USERNAME_GROUP}"),
+                        InlineKeyboardButton("Bots Channel", url=f"https://t.me/{Config.USERNAME_CHANNEL}")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -368,14 +362,14 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/DevsZone).",
+                        text=f"Maaf Pak, Anda Dilarang menggunakan saya. Hubungi saya [Support Group](https://t.me/{Config.USERNAME_GROUP}).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
                 await cmd.message.edit(
-                    text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+                    text="**Anda Masih Belum Gabung ☹️, Silakan Bergabunglah dengan Saluran Pembaruan Saya untuk menggunakan Bot ini!**\n\nKarena Kelebihan Beban, Hanya Pelanggan Saluran yang dapat menggunakan Bot!",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -391,7 +385,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/DevsZone).",
+                    text=f"Ada yang salah. Hubungi saya [Support Group](t.me/{Config.USERNAME_GROUP}).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -403,8 +397,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Support Group", url=f"https://t.me/{Config.USERNAME_GROUP}"),
+                        InlineKeyboardButton("Bots Channel", url=f"https://t.me/{Config.USERNAME_CHANNEL}")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
