@@ -51,6 +51,8 @@
             "description": "Broadcast with Forward Tag or as Copy(Without Forward Tag). Value should be True/False !!",
             "required": false
         },
+        "USERNAME_GROUP": {
+        },
         "FORWARD_AS_COPY": {
             "description": "If True all messages will be forwarder As Copy. If False all messages will be forwarder with Forward Tag. Value should be True/False !!",
             "required": false
