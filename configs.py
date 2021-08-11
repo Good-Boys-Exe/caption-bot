@@ -35,14 +35,14 @@ Kirimi saya file apa pun, saya akan menyimpannya di Database saya. Juga berfungs
 
 📡 **Diselenggarakan pada:** [Heroku](https://heroku.com)
 
-🧑🏻‍💻 **Pengembang:** {OWNER_USERNAME}
+🧑🏻‍💻 **Pengembang:** @{OWNER_USERNAME}
 
-👥 **Support Group:** {USERNAME_GROUP}
+👥 **Support Group:** @{USERNAME_GROUP}
 
-📢 **Updates Channel:** {USERNAME_CHANNEL}
+📢 **Updates Channel:** @{USERNAME_CHANNEL}
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Pengembang:** {OWNER_USERNAME}
+🧑🏻‍💻 **Pengembang:** @{OWNER_USERNAME}
 
 Pengembang adalah Super Noob. Baru Belajar dari Dokumen Resmi. Harap Donasi pengembang untuk Menjaga Layanan Tetap Hidup.
 
