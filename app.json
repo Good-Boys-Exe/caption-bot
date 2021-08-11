@@ -52,16 +52,16 @@
             "required": false
         },
         "USERNAME_GROUP": {
-            "description": tanpa tanda @
+            "description": "tanpa tanda @",
         },
         "USERNAME_CHANNEL": {
-            "description": tanpa tanda @
+            "description": "tanpa tanda @",
         },
         "BOT_NAME": {
-            "description": masukkan nama bot
+            "description": "masukkan nama bot",
         },
         "OWNER_USERNAME": {
-            "description": tanpa tanda @
+            "description": "tanpa tanda @",
         },
         "DONATE_LINK": {
         },
