@@ -50,7 +50,7 @@ Juga ingat bahwa pengembang akan Menghapus Konten Dewasa dari Database. Jadi leb
 [Donate Now](DONATE_LINK)
 """
 	HOME_TEXT = """
-Hi, {}](tg://user?id={})\n\nIni Permanen **FILE STORE**.
+Hi, [{}](tg://user?id={})\n\nIni Permanen **FILE STORE**.
 
 Kirimi saya file apa pun, saya akan memberi Anda Tautan yang Dapat Dibagikan secara permanen. Saya Mendukung Saluran Juga! Centang Tombol **About Bot**.
 """
