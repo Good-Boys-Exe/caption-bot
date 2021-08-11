@@ -47,7 +47,7 @@ Kirimi saya file apa pun, saya akan menyimpannya di Database saya. Juga berfungs
 Pengembang adalah Super Noob. Baru Belajar dari Dokumen Resmi. Harap Donasi pengembang untuk Menjaga Layanan Tetap Hidup.
 
 Juga ingat bahwa pengembang akan Menghapus Konten Dewasa dari Database. Jadi lebih baik 
-[Donate Now](DONATE_LINK)
+[Donate Now]({DONATE_LINK})
 """
 	HOME_TEXT = """
 Hi, [{}](tg://user?id={})\n\nIni Permanen **FILE STORE**.
