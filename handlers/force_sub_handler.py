@@ -1,8 +1,9 @@
 # (c) @AbirHasan2005
 
-from configs import Config
 from pyrogram.errors import UserNotParticipant
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
+from configs import Config
 
 
 async def handle_force_sub(bot, cmd):
@@ -14,7 +15,7 @@ async def handle_force_sub(bot, cmd):
                 chat_id=cmd.from_user.id,
                 text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
                 parse_mode="markdown",
-                disable_web_page_preview=True
+                disable_web_page_preview=True,
             )
             return 400
     except UserNotParticipant:
@@ -24,14 +25,14 @@ async def handle_force_sub(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                        InlineKeyboardButton(
+                            "🤖 Join Updates Channel", url=invite_link.invite_link
+                        )
                     ],
-                    [
-                        InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
-                    ]
+                    [InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")],
                 ]
             ),
-            parse_mode="markdown"
+            parse_mode="markdown",
         )
         return 400
     except Exception:
@@ -39,6 +40,6 @@ async def handle_force_sub(bot, cmd):
             chat_id=cmd.from_user.id,
             text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
             parse_mode="markdown",
-            disable_web_page_preview=True
+            disable_web_page_preview=True,
         )
         return 400
